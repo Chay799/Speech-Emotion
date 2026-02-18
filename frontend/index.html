@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Speech Emotion Recognition</title>
+    <link rel="stylesheet" href="/app/style.css">
+</head>
+
+<body>
+
+<!-- HERO -->
+<div class="hero">
+    <h1>🎤 Speech Emotion Recognition</h1>
+    <p>Detect emotions from Telugu & Kannada speech using Deep Learning</p>
+
+    <div class="badges">
+        <span class="badge">🧠 Deep Learning</span>
+        <span class="badge green">⚡ Real-time</span>
+        <span class="badge yellow">🎯 3 Emotions</span>
+    </div>
+</div>
+
+<div class="container">
+
+    <!-- LEFT CARD -->
+    <div class="card">
+        <h2>Upload Audio</h2>
+        <input type="file" id="fileInput">
+        <button onclick="predictUpload()">Analyze File</button>
+
+        <hr>
+
+        <h2>🎤 Record Audio</h2>
+
+        <!-- ⭐ NEW RECORDER UI -->
+        <div class="recorder-ui">
+            <div id="recordCircle" class="record-circle">⬤</div>
+            <div id="recordStatus">Idle</div>
+            <div id="recordTimer">00:00</div>
+        </div>
+
+        <button onclick="startRecording()">Start Recording</button>
+        <button onclick="stopRecording()">Stop & Analyze</button>
+    </div>
+
+    <!-- RIGHT CARD -->
+    <div class="card">
+
+        <h2>📊 Results</h2>
+
+        <div class="result-card">
+            <div id="languageText">🌐 Language: ---</div> 
+            <div id="bigEmotion">🎯 Waiting...</div>
+            <div id="confidenceText">Upload audio to see prediction</div>
+        </div>
+
+        <div class="bar">
+            <span>Neutral</span>
+            <div id="neutralBar"></div>
+        </div>
+
+        <div class="bar">
+            <span>Angry</span>
+            <div id="angryBar"></div>
+        </div>
+
+        <div class="bar">
+            <span>Sad</span>
+            <div id="sadBar"></div>
+        </div>
+
+    </div>
+
+</div>
+
+<script src="/app/app.js"></script>
+</body>
+</html>
