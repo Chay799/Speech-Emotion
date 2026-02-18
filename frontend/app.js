@@ -57,7 +57,7 @@ async function sendAudioToAPI(file){
     let formData = new FormData();
     formData.append("file", file);
 
-    let res = await fetch("/predict", {
+    let res = await fetch("http://127.0.0.1:8000/predict", {
         method:"POST",
         body:formData
     });
