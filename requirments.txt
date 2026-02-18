@@ -7,7 +7,8 @@ scikit-learn
 librosa
 soundfile
 pydub
-tensorflow-cpu==2.13.0
+tensorflow
+tensorflow-gpu
 torch
 torchaudio
 transformers
